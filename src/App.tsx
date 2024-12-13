@@ -1,5 +1,9 @@
-import { Button } from "./components/ui/button";
+import { Login } from "./components/pages/login";
 
 export function App() {
-  return <Button>Click me</Button>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
