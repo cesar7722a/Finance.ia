@@ -53,6 +53,12 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        brand: {
+          1: "#0F0E11",
+        },
+        brandPrimary: {
+          1: "#55B02E",
+        },
       },
     },
   },
