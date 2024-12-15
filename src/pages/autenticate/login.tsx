@@ -1,7 +1,7 @@
-import { Logo } from "../components/logo";
-import logoGoogle from "../assets/logoGoogle.png";
-import { Button } from "../components/ui/button";
-import financeImagem from "../assets/Decorative_image.png";
+import { Logo } from "../../components/logo";
+import logoGoogle from "../../assets/logoGoogle.png";
+import { Button } from "../../components/ui/button";
+import financeImagem from "../../assets/Decorative_image.png";
 
 export function Login() {
   return (
