@@ -1,3 +1,12 @@
+import { Container } from "@/components/container";
+import { HeaderPages } from "@/components/header-pages";
+
 export function Home() {
-  return <h1>hello world</h1>;
+  return (
+    <Container>
+      <div>
+        <HeaderPages title="Dashboard" />
+      </div>
+    </Container>
+  );
 }
