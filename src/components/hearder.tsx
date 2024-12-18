@@ -6,25 +6,25 @@ import UserImg from "../../src/assets/Avatar.png";
 export function Hearder() {
   return (
     <Container>
-      <div className="py-2 flex justify-between">
+      <div className="py-4 flex justify-between">
         <nav className="flex gap-12 items-center">
           <Link to={"/"}>
             <img src={LogoHearder} alt="Logo finance.ia" />
           </Link>
           <ul className="flex gap-11 items-center">
             <Link to={"#"}>
-              <li className="text-sm font-bold text-brandPrimary-1">
+              <li className="text-sm font-bold text-brandPrimary-1 hover:text-brandPrimary-1/80">
                 Dashboard
               </li>
             </Link>
             <Link to={"#"}>
-              <li className="text-sm font-bold text-textPrimary-1">
+              <li className="text-sm font-bold text-textPrimary-1 hover:text-textPrimary-1/80">
                 Transações
               </li>
             </Link>
             <Link to={"#"}>
               {" "}
-              <li className="text-sm font-bold text-textPrimary-1">
+              <li className="text-sm font-bold text-textPrimary-1 hover:text-textPrimary-1/80">
                 Assinatura
               </li>
             </Link>
