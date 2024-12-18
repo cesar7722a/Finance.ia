@@ -55,6 +55,7 @@ export default {
         },
         brand: {
           1: "#0F0E11",
+          2: "#161716",
         },
         brandPrimary: {
           1: "#55B02E",
