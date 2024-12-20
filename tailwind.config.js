@@ -56,12 +56,17 @@ export default {
         brand: {
           1: "#0F0E11",
           2: "#161716",
+          3: "#0F0E11",
         },
         brandPrimary: {
           1: "#55B02E",
         },
         textPrimary: {
           1: "#71717A",
+        },
+        redPrimary: {
+          1: "#E93030",
+          2: "#F6352E14",
         },
       },
     },
