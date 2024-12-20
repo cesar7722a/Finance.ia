@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   ArrowDownUp,
+  Barcode,
+  Component,
+  CreditCard,
   Eye,
   PiggyBank,
   TrendingDown,
@@ -11,11 +14,12 @@ import {
   Wallet,
 } from "lucide-react";
 import { CardGastosCategirias } from "./components/card-gastos-categorias";
+import { CardTransacoes } from "./components/card-transacoe";
 
 export function Home() {
   return (
     <Container>
-      <div>
+      <div className=" pb-8">
         <HeaderPages title="Dashbord" />
         <div className="flex gap-8 justify-between">
           <div className="w-[886px] space-y-6">
@@ -148,7 +152,33 @@ export function Home() {
               </div>
             </div>
           </div>
-          <div className="w-[444px] border border-blue-700"></div>
+          <div className="w-[444px] border border-white/10 rounded-xl p-5 space-y-6">
+            <div className="flex justify-between items-center">
+              <h4 className="text-lg font-bold">Transações</h4>
+              <Button className="rounded-full border border-white/10 bg-transparent hover:bg-white/5">
+                Ver mais
+              </Button>
+            </div>
+            <div className="h-px bg-white/10" />
+            <CardTransacoes
+              Icon={CreditCard}
+              data="25 Nov, 2025"
+              title="Salário"
+              valor={3900}
+            />
+            <CardTransacoes
+              Icon={Barcode}
+              data="25 Nov, 2025"
+              title="Salário"
+              valor={3900}
+            />
+            <CardTransacoes
+              Icon={Component}
+              data="25 Nov, 2025"
+              title="Salário"
+              valor={3900}
+            />
+          </div>
         </div>
       </div>
     </Container>
