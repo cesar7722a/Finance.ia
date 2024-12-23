@@ -22,7 +22,7 @@ export function HeaderPages({ title }: HeaderPagesProps) {
         </button>
         <span>
           <Select>
-            <SelectTrigger className="w-32 py-2 rounded-full border border-white/10 font-bold hover:bg-white/5">
+            <SelectTrigger className="w-32 py-2 px-4 rounded-full border border-white/10 font-bold hover:bg-white/5">
               <SelectValue placeholder="Novembro" />
             </SelectTrigger>
             <SelectContent className="bg-brand-1 text-white border-white/10">
