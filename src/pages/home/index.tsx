@@ -8,6 +8,7 @@ import { CardInvesReceiDesp } from "./components/card-inves-recei-desp";
 import React from "react";
 import { InputSelect } from "@/components/input-select";
 import { Input } from "@/components/input";
+import { InputDia } from "@/components/input-dia";
 
 export function Home() {
   const [isModal, setIsMOdal] = React.useState<boolean>(true);
@@ -63,6 +64,7 @@ export function Home() {
               label="Método de pagamento"
               options={["Pix", "Cartão", "Boleto"]}
             />
+            <InputDia label="Data" />
           </form>
         </div>
       )}
