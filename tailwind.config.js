@@ -58,6 +58,7 @@ export default {
           2: "#161716",
           3: "#0F0E11",
           4: "#141414",
+          5: "#1F1F21",
         },
         brandPrimary: {
           1: "#55B02E",
@@ -72,5 +73,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 };
