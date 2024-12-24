@@ -12,12 +12,12 @@ export function Hearder() {
             <img src={LogoHearder} alt="Logo finance.ia" />
           </Link>
           <ul className="flex gap-11 items-center">
-            <Link to={"#"}>
+            <Link to={"/"}>
               <li className="text-sm font-bold text-brandPrimary-1 hover:text-brandPrimary-1/80">
                 Dashboard
               </li>
             </Link>
-            <Link to={"#"}>
+            <Link to={"/transicoes"}>
               <li className="text-sm font-bold text-textPrimary-1 hover:text-textPrimary-1/80">
                 Transações
               </li>

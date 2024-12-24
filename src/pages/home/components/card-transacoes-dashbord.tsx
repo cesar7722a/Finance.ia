@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { CardTransacoes } from "./card-transacoe";
 import { Barcode, Component, CreditCard } from "lucide-react";
+import { Link } from "react-router";
 
 export function CardTransacoesDashBord() {
   return (
     <div className="w-[444px] border border-white/10 rounded-xl p-6 space-y-5">
       <div className="flex justify-between items-center">
         <h4 className="text-lg font-bold">Transações</h4>
-        <Button className="rounded-full border border-white/10 bg-transparent hover:bg-white/5">
-          Ver mais
-        </Button>
+        <Link to={"/transicoes"}>
+          <Button className="rounded-full border border-white/10 bg-transparent hover:bg-white/5">
+            Ver mais
+          </Button>
+        </Link>
       </div>
       <div className="h-px bg-white/10" />
       <CardTransacoes
