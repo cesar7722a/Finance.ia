@@ -1,3 +1,4 @@
+import { ContainerHeaderPages } from "@/components/container-header-pages";
 import {
   Select,
   SelectContent,
@@ -13,7 +14,7 @@ type HeaderPagesProps = {
 
 export function HeaderPages({ title }: HeaderPagesProps) {
   return (
-    <div className="py-8 flex justify-between items-center">
+    <ContainerHeaderPages>
       <h1 className="text-2xl font-bold">{title}</h1>
       <div className="flex">
         <button className="py-2 px-4 flex gap-2 hover:text-white/80">
@@ -33,6 +34,6 @@ export function HeaderPages({ title }: HeaderPagesProps) {
           </Select>
         </span>
       </div>
-    </div>
+    </ContainerHeaderPages>
   );
 }
