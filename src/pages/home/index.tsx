@@ -1,5 +1,4 @@
 import { Container } from "@/components/container";
-import { HeaderPages } from "@/components/header-pages";
 import { CardTransacoesDashBord } from "./components/card-transacoes-dashbord";
 import { CardCategirias } from "./components/card-categorias";
 import { CardGrafico } from "./components/card-grafico";
@@ -7,6 +6,7 @@ import { CardAddTransacoes } from "./components/card-add-transacoes";
 import { CardInvesReceiDesp } from "./components/card-inves-recei-desp";
 import React, { FormEvent } from "react";
 import { Modal } from "./components/modal";
+import { HeaderPages } from "./components/header-pages";
 
 export function Home() {
   const [isModal, setIsModal] = React.useState<boolean>(false);

@@ -1,11 +1,11 @@
-import { FileText } from "lucide-react";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from "@/components/ui/select";
+import { FileText } from "lucide-react";
 
 type HeaderPagesProps = {
   title: string;
