@@ -6,6 +6,9 @@ export default {
     fontFamily: {
       sans: "Mulish",
     },
+    variants: {
+      scrollbar: ["rounded"],
+    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",

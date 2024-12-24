@@ -67,3 +67,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px; /* Largura da scrollbar */
+  height: 16px; /* Altura horizontal (se aplicável) */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #4a5568; /* Cor do "dedo" */
+  border-radius: 6px; /* Arredondamento */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background-color: #edf2f7; /* Cor do "trilho" */
+}
