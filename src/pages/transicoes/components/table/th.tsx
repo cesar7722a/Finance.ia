@@ -5,5 +5,10 @@ interface TableHederProps extends ComponentProps<`th`> {
 }
 
 export function TableHeader(props: TableHederProps) {
-  return <th className="text-left px-4 py-4 text-sm text-white" {...props} />;
+  return (
+    <th
+      className="text-left px-4 py-4 text-sm text-white font-normal"
+      {...props}
+    />
+  );
 }
