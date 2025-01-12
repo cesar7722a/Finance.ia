@@ -5,8 +5,8 @@ import { CardGrafico } from "./components/card-grafico";
 import { CardAddTransacoes } from "./components/card-add-transacoes";
 import { CardInvesReceiDesp } from "./components/card-inves-recei-desp";
 import React, { FormEvent } from "react";
-import { Modal } from "./components/modal";
 import { HeaderPages } from "./components/header-pages";
+import { Modal } from "@/components/modal-add-transicoes";
 
 export function Home() {
   const [isModal, setIsModal] = React.useState<boolean>(false);
