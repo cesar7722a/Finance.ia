@@ -2,7 +2,11 @@ import { ExternalLink, Trash2 } from "lucide-react";
 import { TableCell } from "./td";
 import { TableHeader } from "./th";
 
-export function Table() {
+interface TableProps {
+  handleOpenModalEditTransicao: () => void;
+}
+
+export function Table({ handleOpenModalEditTransicao }: TableProps) {
   return (
     <div className="border border-white/10 rounded-lg">
       <table className="w-full pl-12">
@@ -31,7 +35,10 @@ export function Table() {
 
               <TableCell className="flex justify-end">
                 <span className="flex gap-6 w-12">
-                  <ExternalLink className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer" />
+                  <ExternalLink
+                    onClick={handleOpenModalEditTransicao}
+                    className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer"
+                  />
                   <Trash2 className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer" />
                 </span>
               </TableCell>

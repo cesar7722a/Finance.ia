@@ -5,15 +5,23 @@ import { ArrowDownUp } from "lucide-react";
 import { Table } from "./components/table/table";
 import { FormEvent, useState } from "react";
 import { Modal } from "@/components/modal-add-transicoes";
+import { ModalEditTransacao } from "./components/modal-edit-transicao";
 
 export function Transicoes() {
-  const [openModalTrancioes, setOpenModalTrancioes] = useState<boolean>(false);
+  const [openModalTransicoes, setOpenModalTransicoes] =
+    useState<boolean>(false);
+  const [openModalEditTransicoes, setOpenModalEditTransicoes] =
+    useState<boolean>(false);
   const handleOpenModalTransicoes = () => {
-    setOpenModalTrancioes(true);
+    setOpenModalTransicoes(true);
   };
   const ClosedModal = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
-    setOpenModalTrancioes(false);
+    setOpenModalTransicoes(false);
+  };
+
+  const handleOpenModalEditTransicao = () => {
+    setOpenModalEditTransicoes(true);
   };
 
   return (
@@ -28,8 +36,11 @@ export function Transicoes() {
           <ArrowDownUp className="size-4" />
         </Button>
       </ContainerHeaderPages>
-      <Table />
-      {openModalTrancioes && <Modal ClosedModal={ClosedModal} />}
+      <Table handleOpenModalEditTransicao={handleOpenModalEditTransicao} />
+      {openModalTransicoes && <Modal ClosedModal={ClosedModal} />}
+      {openModalEditTransicoes && (
+        <ModalEditTransacao ClosedModal={ClosedModal} />
+      )}
     </Container>
   );
 }
