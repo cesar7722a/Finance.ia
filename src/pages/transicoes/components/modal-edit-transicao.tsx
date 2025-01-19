@@ -11,14 +11,13 @@ type ModalProps = {
 export function ModalEditTransacao({ ClosedModal }: ModalProps) {
   return (
     <div className=" fixed z-20 bg-brand-1/60 top-0 left-0 right-0 bottom-0 flex items-center justify-end">
-      <div className="text-white border-none scrollbar-thumb-brand-5 scrollbar-track-brand-2 overflow-x-hidden h-[584px] hover:scrollbar-thumb-white scrollbar-hover-thumb scrollbar overflow-y-auto scrollbar-custom">
+      <div className="text-white border-none rounded-lg scrollbar-thumb-brand-5 scrollbar-track-brand-2 overflow-x-hidden h-[584px] hover:scrollbar-thumb-white space-y-6 scrollbar-hover-thumb scrollbar overflow-y-auto scrollbar-custom">
         <form className="bg-brand-4 p-5 rounded-lg rounded-tr-none rounded-br-none space-y-5 w-[350px]">
-          <div className="flex">
-            <h1 className="text-center text-xl font-bold">
-              Adicionar Transação
-            </h1>
-            <X />
+          <div className="flex justify-between items-center">
+            <h1 className="text-center text-xl font-bold">Transação</h1>
+            <X className="size-5 cursor-pointer" />
           </div>
+          <div className="h-px bg-white/10 w-full px-4" />
           <Input
             label="Título"
             placeholder="Título"
