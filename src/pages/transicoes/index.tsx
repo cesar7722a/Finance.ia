@@ -16,7 +16,7 @@ export function Transicoes() {
   const handleOpenModalTransicoes = () => {
     setOpenModalTransicoes(true);
   };
-  const [openModalConfirmDelete, setOpenModalConfirmDelete] = useState(true);
+  const [openModalConfirmDelete, setOpenModalConfirmDelete] = useState(false);
 
   const ClosedModalAddTransicao = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
@@ -28,6 +28,14 @@ export function Transicoes() {
   };
   const handleOpenModalEditTransicao = () => {
     setOpenModalEditTransicoes(true);
+  };
+
+  const CloseModalConfirmDelete = () => {
+    setOpenModalConfirmDelete(false);
+  };
+
+  const HandleOpenModalConfirmDelete = () => {
+    setOpenModalConfirmDelete(true);
   };
 
   return (
@@ -42,7 +50,10 @@ export function Transicoes() {
           <ArrowDownUp className="size-4" />
         </Button>
       </ContainerHeaderPages>
-      <Table handleOpenModalEditTransicao={handleOpenModalEditTransicao} />
+      <Table
+        handleOpenModalEditTransicao={handleOpenModalEditTransicao}
+        HandleOpenModalConfirmDelete={HandleOpenModalConfirmDelete}
+      />
       {openModalTransicoes && (
         <Modal ClosedModalAddTransicao={ClosedModalAddTransicao} />
       )}
@@ -52,7 +63,9 @@ export function Transicoes() {
         />
       )}
 
-      {openModalConfirmDelete && <ModalConfirmDelete />}
+      {openModalConfirmDelete && (
+        <ModalConfirmDelete CloseModalConfirmDelete={CloseModalConfirmDelete} />
+      )}
     </Container>
   );
 }

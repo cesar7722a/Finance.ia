@@ -4,9 +4,13 @@ import { TableHeader } from "./th";
 
 interface TableProps {
   handleOpenModalEditTransicao: () => void;
+  HandleOpenModalConfirmDelete: () => void;
 }
 
-export function Table({ handleOpenModalEditTransicao }: TableProps) {
+export function Table({
+  handleOpenModalEditTransicao,
+  HandleOpenModalConfirmDelete,
+}: TableProps) {
   return (
     <div className="border border-white/10 rounded-lg">
       <table className="w-full pl-12">
@@ -39,7 +43,10 @@ export function Table({ handleOpenModalEditTransicao }: TableProps) {
                     onClick={handleOpenModalEditTransicao}
                     className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer"
                   />
-                  <Trash2 className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer" />
+                  <Trash2
+                    onClick={HandleOpenModalConfirmDelete}
+                    className="size-5 text-textPrimary-1 hover:text-textPrimary-1/70 cursor-pointer"
+                  />
                 </span>
               </TableCell>
             </tr>
