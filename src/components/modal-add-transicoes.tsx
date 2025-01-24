@@ -4,10 +4,10 @@ import { InputSelect } from "@/components/input-select";
 import { Button } from "@/components/ui/button";
 
 type ModalProps = {
-  ClosedModal: (e: React.FormEvent<HTMLElement>) => void;
+  ClosedModalAddTransicao: (e: React.FormEvent<HTMLElement>) => void;
 };
 
-export function Modal({ ClosedModal }: ModalProps) {
+export function Modal({ ClosedModalAddTransicao }: ModalProps) {
   return (
     <div className=" fixed z-20 bg-brand-1/60 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
       <div className="text-white border-none scrollbar-thumb-brand-5 scrollbar-track-brand-2 overflow-x-hidden h-[584px] hover:scrollbar-thumb-white scrollbar-hover-thumb scrollbar overflow-y-auto scrollbar-custom">
@@ -47,7 +47,7 @@ export function Modal({ ClosedModal }: ModalProps) {
           <InputDia label="Data" />
           <div className="space-x-3">
             <Button
-              onClick={ClosedModal}
+              onClick={ClosedModalAddTransicao}
               className="py-2 px-4 rounded-lg w-[149px]  text-sm font-bold text-white  bg-brand-5 hover:bg-brand-5/50"
             >
               Cancelar

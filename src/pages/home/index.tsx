@@ -14,7 +14,7 @@ export function Home() {
   const OpenModal = () => {
     setIsModal(true);
   };
-  const ClosedModal = (e: FormEvent<HTMLElement>) => {
+  const ClosedModalAddTransicao = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
     setIsModal(false);
   };
@@ -36,7 +36,7 @@ export function Home() {
           </div>
         </div>
       </Container>
-      {isModal && <Modal ClosedModal={ClosedModal} />}
+      {isModal && <Modal ClosedModalAddTransicao={ClosedModalAddTransicao} />}
     </>
   );
 }

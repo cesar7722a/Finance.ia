@@ -6,6 +6,7 @@ import { Table } from "./components/table/table";
 import { FormEvent, useState } from "react";
 import { Modal } from "@/components/modal-add-transicoes";
 import { ModalEditTransacao } from "./components/modal-edit-transicao";
+import { ModalConfirmDelete } from "@/components/modal-confirm-delete";
 
 export function Transicoes() {
   const [openModalTransicoes, setOpenModalTransicoes] =
@@ -15,11 +16,16 @@ export function Transicoes() {
   const handleOpenModalTransicoes = () => {
     setOpenModalTransicoes(true);
   };
-  const ClosedModal = (e: FormEvent<HTMLElement>) => {
+  const [openModalConfirmDelete, setOpenModalConfirmDelete] = useState(true);
+
+  const ClosedModalAddTransicao = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
     setOpenModalTransicoes(false);
   };
-
+  const ClosedModalEditTransicoes = (e: FormEvent<HTMLElement>) => {
+    e.preventDefault();
+    setOpenModalEditTransicoes(false);
+  };
   const handleOpenModalEditTransicao = () => {
     setOpenModalEditTransicoes(true);
   };
@@ -37,10 +43,16 @@ export function Transicoes() {
         </Button>
       </ContainerHeaderPages>
       <Table handleOpenModalEditTransicao={handleOpenModalEditTransicao} />
-      {openModalTransicoes && <Modal ClosedModal={ClosedModal} />}
-      {openModalEditTransicoes && (
-        <ModalEditTransacao ClosedModal={ClosedModal} />
+      {openModalTransicoes && (
+        <Modal ClosedModalAddTransicao={ClosedModalAddTransicao} />
       )}
+      {openModalEditTransicoes && (
+        <ModalEditTransacao
+          ClosedModalEditTransicoes={ClosedModalEditTransicoes}
+        />
+      )}
+
+      {openModalConfirmDelete && <ModalConfirmDelete />}
     </Container>
   );
 }
