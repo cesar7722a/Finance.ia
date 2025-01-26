@@ -52,16 +52,19 @@ export function ModalEditTransacao({ ClosedModalEditTransicoes }: ModalProps) {
                 <Trash2 className="size-4" />
               </div>
             </div>
-            <div className="flex gap-3">
-              <Button
-                onClick={ClosedModalEditTransicoes}
-                className="py-2 px-4 rounded-lg w-[149px]  text-sm font-bold text-white  bg-brand-5 hover:bg-brand-5/50"
-              >
-                Cancelar
-              </Button>
-              <Button className="disabled:bg-brandPrimary-1/60 py-2 px-4 rounded-lg w-[149px]  text-sm font-bold text-white bg-brandPrimary-1 hover:bg-brandPrimary-1/80">
-                Salvar
-              </Button>
+            <div className="space-y-3">
+              <div className="px-4 py-3 h-16 bg-white/10 rounded-md"></div>
+              <div className="flex gap-3">
+                <Button
+                  onClick={ClosedModalEditTransicoes}
+                  className="py-2 px-4 rounded-lg w-[149px]  text-sm font-bold text-white  bg-brand-5 hover:bg-brand-5/50"
+                >
+                  Cancelar
+                </Button>
+                <Button className="disabled:bg-brandPrimary-1/60 py-2 px-4 rounded-lg w-[149px]  text-sm font-bold text-white bg-brandPrimary-1 hover:bg-brandPrimary-1/80">
+                  Salvar
+                </Button>
+              </div>
             </div>
           </div>
         </form>
